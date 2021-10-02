@@ -55,10 +55,8 @@ public class MainActivity3 extends AppCompatActivity {
         }
 
         StringRequest stringRequest;
-        stringRequest = new StringRequest(Request.Method.POST, tempUrl, new Response.Listener<String>()
-
-        @Override
-        public void onResponse(String response) {
+        stringRequest = new StringRequest(Request.Method.POST, tempUrl, new Response.Listener<String>(){        @Override
+        public void onResponse(String response){
             String output = "";
             try {
                 JSONObject jsonResponse = new JSONObject(response);
@@ -90,6 +88,6 @@ public class MainActivity3 extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
+        }
     }
 }
